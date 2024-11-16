@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music_Recommendation</title>
+    <link rel="stylesheet" href="sys.css">
+</head>
+<body>
+    <!-- Home Screen -->
+    <div class="screen" id="homeScreen">
+        <h1>MoodTunes</h1>
+        <button onclick="showScreen('moodDetectionScreen')">Start Mood Detection</button>
+        <button onclick="showScreen('historyScreen')">View History</button>
+    </div>
+
+    <!-- Mood Detection Screen -->
+    <div class="screen" id="moodDetectionScreen">
+        <h2>Detecting Your Mood</h2>
+        <div class="webcam-feed">
+            <video id="webcam" autoplay playsinline></video>
+        </div>
+        <p id="emotionStatus">Current Emotion: Neutral</p>
+        <button onclick="showScreen('recommendationScreen')">Capture Emotion</button>
+        <button onclick="showScreen('homeScreen')">Cancel</button>
+    </div>
+
+    <!-- Recommendation Screen -->
+    <div class="screen" id="recommendationScreen">
+        <h2>Recommended Music for <span id="detectedEmotion">Happy</span></h2>
+        <div class="playlist">
+            <div class="track">
+                <p>Track: Song Title 1</p>
+                <p>Artist: Artist Name</p>
+            </div>
+            <div class="track">
+                <p>Track: Song Title 2</p>
+                <p>Artist: Artist Name</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button>Play</button>
+            <button>Pause</button>
+            <button>Skip</button>
+        </div>
+        <button onclick="showScreen('homeScreen')">Home</button>
+        <div class="webcam-feed">
+            <video id="webcam" autoplay playsinline></video>
+        </div>
+        
+    </div>
+    
+    <script src="prot.js"></script>
+</body>
+</html>

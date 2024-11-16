@@ -1,0 +1,94 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: rgb(rgb(181, 35, 35), green, blue);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #16709d; /* Fallback color */
+    color: #333;
+    animation: backgroundGradient 10s ease-in-out infinite;
+}
+
+@keyframes backgroundGradient {
+    0% { background-color: #125374; }    
+    25% { background-color: #09355f; }   
+    50% { background-color: #2d1c63; }   
+    75% { background-color: #061d26; }   
+    100% { background-color: #125374; }  
+}
+
+/* General screen styling */
+.screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Make the first screen visible by default */
+.screen.active {
+    display: flex;
+}
+
+/* Buttons */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #009688;
+    color: white;
+}
+
+/* Webcam feed styling */
+.webcam-feed {
+    margin: 20px 0;
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #555;
+}
+
+/* Playlist styling */
+.playlist {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.track {
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Controls styling */
+.controls {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
