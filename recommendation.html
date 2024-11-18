@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection & Music Recommendation</title>
+    <link rel="stylesheet" href="recommendation.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Emotion Detection & Music Recommendation</h1>
+        </header>
+        <main>
+            <div class="camera-section">
+                <video id="webcam" autoplay playsinline></video>
+                <button id="detectEmotionButton">Emotion Detection</button>
+                <p id="emotionDisplay">Detected Emotion: <span id="detectedEmotion">Neutral</span></p>
+            </div>
+
+            <div class="recommendation-section">
+                <button id="recommendMusicButton">Recommend Music</button>
+                <div id="musicRecommendations">
+                    <p>Your recommended songs will appear here!</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <button onclick="window.location.href='index.html'">Home</button>
+        </footer>
+    </div>
+
+    <script src="recommendation.js"></script>
+</body>
+
+</html>

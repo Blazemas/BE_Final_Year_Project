@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 700px;
+}
+
+/* Header */
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Camera Section */
+.camera-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    max-width: 300px;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+#emotionDisplay {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background: #ff5c5c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+    background: #ff1c1c;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Recommendation Section */
+.recommendation-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#musicRecommendations {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
