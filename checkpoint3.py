@@ -3,16 +3,15 @@ import webbrowser
 import time
 
 # Spotify Access Token
-ACCESS_TOKEN = "BQDegIN7RqipSw_lt9pDSPipb-p8H4oAbsuBEeC7aYAExl9dQPwz-FhvjfdSCfLa2kniHYDa-MpUM5YB3JZWDDgeT8a0KjV63uA0eoN7dmw8-3yICfxCY-1g2JQXgmllDCqvTdypkNo"
+ACCESS_TOKEN = "BQB9Z5zZ1FaVvZEjNfwkp3L_ImtK-lSjnmEHuPaUsTonic2VxmnmozeuvIgBEh4esrujyy0DnOJzIGgqJmRjnpuv1PBAN0tWO2FD5OE_uGvb_JRMGL-kBmRoMlgstvIeTBMbzBjgF1A"
 
 # Mood-to-Playlist Mapping
 mood_to_playlist = {
-    1: "5XGCEyEv01OLSieGQb0L3r",  # Angry
-    2: "2uEODdOqnVjn2I7hFyam6C",  # Disgust
-    3: "4ZYnq0FmTGP5qRxm7dfN1i",  # Fear
-    4: "2N43HIotuWDjlRB4BrUEQR",  # Neutral
-    5: "7M9YyZeUW75LUUhAWgRf58",  # Sad
-    6: "0flG11VjoQPAbseYlWvkBk",  # Happy
+    1: "7M9YyZeUW75LUUhAWgRf58",  # Sad
+    2: "5XGCEyEv01OLSieGQb0L3r",  # Angry
+    3: "2N43HIotuWDjlRB4BrUEQR",  # Neutral
+    4: "0flG11VjoQPAbseYlWvkBk",  # Happy
+    5: "2uEODdOqnVjn2I7hFyam6C",  # Surprise
 }
 
 # Function to fetch tracks from a playlist
@@ -28,6 +27,35 @@ def fetch_playlist_tracks(playlist_id):
     else:
         print(f"Failed to fetch tracks for playlist {playlist_id}: {response.status_code}, {response.text}")
         return []
+
+
+# new part added-------------------------------------
+
+
+emotion_to_mood_number = {
+    'sad': 1,
+    'angry': 2,
+    'neutral': 3,
+    'happy': 4,
+    'surprise': 5
+}
+
+# Example: Get emotion from ML
+emotion = 'sad'  # This will be returned from your ML model
+
+# Convert emotion to number
+initial_mood = emotion_to_mood_number.get(emotion.lower())
+
+if initial_mood:
+    play_and_transition(initial_mood=initial_mood, songs_per_mood=3)
+else:
+    print(f"Invalid emotion: {emotion}")
+
+
+#-------------------------------------------------- 
+
+
+
 
 # Function to play songs and transition moods
 def play_and_transition(initial_mood, songs_per_mood):
